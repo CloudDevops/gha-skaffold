@@ -43,8 +43,8 @@ jobs:
     - name: Update kube config
       run: aws eks update-kubeconfig --name per-demo --region us-west-2
       
-      - name: Install Skaffold
-        run: |
+    - name: Install Skaffold
+      run: |
           curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64 && \
           sudo install skaffold /usr/local/bin/
           skaffold dev ----assume-yes=true
