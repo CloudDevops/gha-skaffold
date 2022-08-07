@@ -52,4 +52,4 @@ jobs:
       run: |
           curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64 && \
           sudo install skaffold /usr/local/bin/
-          skaffold dev --assume-yes=true --status-check=false
+          skaffold run
