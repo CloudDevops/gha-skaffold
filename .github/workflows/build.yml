@@ -42,6 +42,7 @@ jobs:
         
     - name: Update kube config
       run: aws eks update-kubeconfig --name per-demo --region us-west-2
+           aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/j2x1y3l5
       
     - name: Install Skaffold
       run: |
