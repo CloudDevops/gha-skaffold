@@ -13,4 +13,4 @@ spec:
       spec:
         containers:
         - name: hello-world
-          image: public.ecr.aws/j2x1y3l5/skaffold:latest
+          image: public.ecr.aws/j2x1y3l5/skafold:latest
