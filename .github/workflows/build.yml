@@ -58,4 +58,4 @@ jobs:
       uses: hiberbee/github-action-skaffold@1.19.0
       with:
           command: run
-          repository: public.ecr.aws/j2x1y3l5
+          repository: public.ecr.aws/j2x1y3l5/skafold
