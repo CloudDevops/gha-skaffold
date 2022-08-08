@@ -48,8 +48,14 @@ jobs:
       run: aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/j2x1y3l5
    
    
-    - name: Install Skaffold
-      run: |
-          curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64 && \
-          sudo install skaffold /usr/local/bin/
-          skaffold run
+  #  - name: Install Skaffold
+  #    run: |
+  #        curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64 && \
+  #        sudo install skaffold /usr/local/bin/
+  #        skaffold run
+
+    - name: Run Skaffold pipeline as action
+      uses: hiberbee/github-action-skaffold@1.19.0
+      with:
+          command: run
+          repository: public.ecr.aws/j2x1y3l5
